@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.navbar h1 {
+  color: white;
+}
+.navbarInputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #606060;
+  max-height: 22px;
+  padding: 5px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.navbarInput {
+  border: none;
+  background: transparent;
+  color: white;
+}
+.navbarInput:focus {
+  outline: none;
+}

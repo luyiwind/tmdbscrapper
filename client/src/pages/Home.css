@@ -1,0 +1,13 @@
+.home__bg {
+  background: red;
+  background: url("../images/home-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 160px;
+}
+
+.progress {
+  display: grid;
+  place-items: center;
+  margin: 50% auto;
+}

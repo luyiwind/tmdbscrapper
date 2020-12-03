@@ -1,0 +1,37 @@
+.searchCard {
+  display: flex;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.searchCard img {
+  margin-right: 10px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.search .navbar {
+  padding: unset;
+}
+
+.search .navbar .navbarInputContainer {
+  margin: unset;
+  margin-top: -20px;
+}
+.search a {
+  text-decoration: none;
+}
+.search__title {
+  font-weight: 500;
+  color: #002448;
+}
+.search__overview {
+  margin-top: 5px;
+  color: #7a716c;
+}
+.progress {
+  display: grid;
+  place-items: center;
+  margin: 50% auto;
+}

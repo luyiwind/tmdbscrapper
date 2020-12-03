@@ -1,0 +1,62 @@
+.singleMovie__details div span {
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+.singleMovie__details div p {
+  margin: 10px 0px;
+}
+.singleMovie__details {
+  padding: 20px;
+}
+
+.singleMovie__tagline {
+  color: #7a7a7a;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.singleMovie__bg {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
+
+.singleMovie__bg img {
+  object-fit: contain;
+  width: 150px;
+  border-radius: 5px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.singleMovie__header {
+  margin-top: 20px;
+}
+.singleMovie {
+  background: #000;
+  color: white;
+  overflow: hidden;
+}
+.singleMovie button.MuiButton-root {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: white;
+}
+.singleMovie button.MuiButton-root .MuiButton-label a {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+.progress {
+  display: grid;
+  place-items: center;
+  margin: 50% auto;
+}
