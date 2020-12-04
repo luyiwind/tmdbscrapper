@@ -1,19 +1,18 @@
 .movie img {
   object-fit: contain;
-
-  border-radius: 10px;
+  border-radius: 5px;
   height: auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 1s;
+  padding: 10px;
 }
 .movie img:hover {
   transform: scale(1.02);
 }
 
 .movie {
-  width: 220px;
-  margin-left: 10px;
-  margin: 0 auto;
+  width: 150px;
+  margin-right: 71px;
 }
 
 .movie__info {

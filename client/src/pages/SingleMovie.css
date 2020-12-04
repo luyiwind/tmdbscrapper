@@ -9,9 +9,16 @@
 .singleMovie__details {
   padding: 20px;
 }
-
+.singleMovie__details__header {
+  display: flex;
+  align-items: center;
+}
+.singleMovie__details__header > div {
+  display: flex;
+  align-items: center;
+}
 .singleMovie__tagline {
-  color: #7a7a7a;
+  color: red;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -20,7 +27,6 @@
   background-position: center !important;
   background-size: cover;
   background-attachment: fixed;
-
   display: flex;
   justify-content: space-around;
   text-align: center;

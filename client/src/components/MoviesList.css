@@ -1,5 +1,9 @@
 .moviesList {
   position: relative;
   margin-top: 40px;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+.moviesList::-webkit-scrollbar {
+  display: none;
 }

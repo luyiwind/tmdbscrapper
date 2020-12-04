@@ -9,6 +9,8 @@ function MoviesList({ movies }) {
         style={{
           display: "flex",
           flexWrap: "wrap",
+          minWidth: "500px",
+          margin: "0px auto",
         }}
       >
         {movies.map((movie) => (

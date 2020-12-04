@@ -67,14 +67,6 @@ function SingleMovie(props) {
           >
             <img src={movie?.image} alt="" />
             <div className="singleMovie__header">
-              <h1 className="singleMovie__title">{movie?.title}</h1>
-
-              <IconButton
-                onClick={() => handleClick(movie?.title)}
-                style={{ color: "white" }}
-              >
-                <PlayArrowIcon fontSize="large" />
-              </IconButton>
               <Dialog onClose={handleClose} open={open}>
                 {trailerUrl ? (
                   <YouTube videoId={trailerUrl} opts={opts} />
@@ -82,11 +74,22 @@ function SingleMovie(props) {
                   <p>Sorry no trailer found</p>
                 )}
               </Dialog>
-              <small>play trailer</small>
             </div>
           </div>
           <div className="singleMovie__details">
-            <span className="singleMovie__tagline">{movie?.tagline}</span>
+            <div className="singleMovie__details__header">
+              <span className="singleMovie__tagline">{movie?.tagline}</span>
+              <div>
+                <IconButton
+                  onClick={() => handleClick(movie?.title)}
+                  style={{ color: "white" }}
+                >
+                  <PlayArrowIcon fontSize="large" />
+                </IconButton>
+                <small>Play trailer</small>
+              </div>
+            </div>
+
             <div>
               <span>Overview</span>
               <p>{movie?.overview}</p>

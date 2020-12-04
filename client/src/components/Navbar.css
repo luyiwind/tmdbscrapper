@@ -5,6 +5,9 @@
   justify-content: center;
   padding: 20px;
 }
+.navbar h1 {
+  color: red;
+}
 
 .navbarInputContainer {
   display: flex;
