@@ -4,7 +4,6 @@ import { IconButton } from "@material-ui/core";
 import "./Navbar.css";
 import { useHistory } from "react-router-dom";
 function Navbar() {
-  const [active, setActive] = useState(false);
   const [input, setInput] = useState("");
   const history = useHistory();
   const handleChange = (e) => {
@@ -23,7 +22,7 @@ function Navbar() {
         <form action="">
           <input
             type="text"
-            className={`navbarInput ${active && "active"}`}
+            className={`navbarInput`}
             placeholder="search"
             onChange={handleChange}
           />

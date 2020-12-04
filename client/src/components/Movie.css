@@ -1,6 +1,6 @@
 .movie img {
   object-fit: contain;
-  width: 100%;
+
   border-radius: 10px;
   height: auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -11,9 +11,9 @@
 }
 
 .movie {
-  width: 90%;
-  margin: 10px auto;
-  background: white;
+  width: 220px;
+  margin-left: 10px;
+  margin: 0 auto;
 }
 
 .movie__info {

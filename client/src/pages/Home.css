@@ -11,3 +11,7 @@
   place-items: center;
   margin: 50% auto;
 }
+
+.home__bg > .navbar > .navbarInputContainer > form > input {
+  color: white;
+}

@@ -35,7 +35,7 @@ function Search() {
         results.map((result) => (
           <NavLink to={`${result.id}`} key={result.id}>
             <div className="searchCard" key={result.id}>
-              <img src={result.image} />
+              <img src={result.image} alt="" />
               <div className="searchDetails">
                 <p className="search__title">{result.title}</p>
                 <p className="search__overview">

@@ -5,7 +5,12 @@ import Movie from "./Movie";
 function MoviesList({ movies }) {
   return (
     <div className="moviesList">
-      <FlipMove>
+      <FlipMove
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+        }}
+      >
         {movies.map((movie) => (
           <Movie key={movie.id} movie={movie} />
         ))}

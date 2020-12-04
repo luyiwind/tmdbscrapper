@@ -12,12 +12,10 @@
   border-radius: 5px;
 }
 .search .navbar {
-  padding: unset;
 }
 
 .search .navbar .navbarInputContainer {
-  margin: unset;
-  margin-top: -20px;
+  color: black;
 }
 .search a {
   text-decoration: none;
@@ -34,4 +32,7 @@
   display: grid;
   place-items: center;
   margin: 50% auto;
+}
+.search > .navbar > h1 {
+  display: none;
 }
