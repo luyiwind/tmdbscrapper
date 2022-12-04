@@ -11,7 +11,7 @@ function getAllMovies() {
   var options = {
     uri: "https://www.themoviedb.org/movie",
     headers: {
-      "accept-language":"en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+      "accept-language":"zh-CN;q=0.8,zh;q=0.7"
     },
     transform: function (body) {
       return cheerio.load(body);
