@@ -10,6 +10,7 @@ function getAllMovies() {
   //get options
   var options = {
     uri: "https://www.themoviedb.org/movie",
+    content-language: "zh-CN",
     transform: function (body) {
       return cheerio.load(body);
     },
