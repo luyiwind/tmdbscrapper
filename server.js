@@ -1,4 +1,4 @@
-const { getAllMovies, searchMovies, getTrends, getMovie } = require("./scraper");
+const { getAllMovies, searchMovies, getTrends, getMovie,getBackdrop } = require("./scraper");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -27,6 +27,11 @@ app.get("/search/:searchterm", (req, res) => {
 
 app.get("/movie/:id", (req, res) => {
   getMovie(req.params.id).then((movie) => {
+    res.json(movie);
+  });
+});
+app.get("/drop/:id", (req, res) => {
+  getBackdrop(req.params.id).then((movie) => {
     res.json(movie);
   });
 });
