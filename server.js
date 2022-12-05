@@ -13,6 +13,12 @@ app.get("/movies", (req, res) => {
   });
 });
 
+app.get("/trends", (req, res) => {
+  getTrends().then((movies) => {
+    res.json(movies);
+  });
+});
+
 app.get("/search/:searchterm", (req, res) => {
   searchMovies(req.params.searchterm).then((results) => {
     res.json(results);
