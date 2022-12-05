@@ -140,10 +140,10 @@ function getBackdrop(id) {
     data.each((i, element) => {
       let result = {};
       const $element = $(element);
-      result.id = $element
+      result.pic = $element
         .find("img")
         .attr("src");
-      result.id = "https://image.tmdb.org/t/p/original/" + result.id.replace("/t/p/w533_and_h300_bestv2/","");
+      result.url = "https://image.tmdb.org/t/p/original/" + result.id.replace("/t/p/w533_and_h300_bestv2/","");
       //console.log(result.id);
       results.push(result);
     });
