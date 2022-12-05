@@ -95,7 +95,6 @@ function searchMovies(searchTerm) {
   return rp(options)
     .then(function ($) {
       const data = $("div.card.v4.tight");
-      console.log(data);
       let results = [];
       data.each((i, element) => {
         let result = {};
@@ -117,6 +116,7 @@ function searchMovies(searchTerm) {
         results.push(result);
       });
       searchCache[searchTerm] = results;
+      const selectedMovies = results.slice(0, 1);
       return results;
     })
     .catch(function (err) {
