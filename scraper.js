@@ -136,7 +136,6 @@ function getBackdrop(id) {
   return rp(options)
   .then(function ($) {
     const data = $("div.backdrop");
-    console.log(data);
     data.each((i, element) => {
       let result = {};
       const $element = $(element);
@@ -144,7 +143,7 @@ function getBackdrop(id) {
         .find("img")
         .attr("src");
       console.log(result.id);
-      result.id = "https://image.tmdb.org/t/p/original/" + result.url.replace("/t/p/w533_and_h300_bestv2/","")
+      result.id = "https://image.tmdb.org/t/p/original/" + result.id.replace("/t/p/w533_and_h300_bestv2/","")
       return result;
     });
   })
