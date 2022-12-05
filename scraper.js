@@ -136,7 +136,12 @@ function searchMovies(searchTerm) {
           result.url = "https://image.tmdb.org/t/p/original/" + result.url.replace("/t/p/w533_and_h300_bestv2/","")
           return result;
         });
-    });
+      })
+      .catch(function (err) {
+        // Crawling failed or Cheerio choked...
+        console.log(err);
+      });
+    })
     .catch(function (err) {
       // Crawling failed or Cheerio choked...
       console.log(err);
