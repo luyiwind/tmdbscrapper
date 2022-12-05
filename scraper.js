@@ -144,7 +144,7 @@ function getBackdrop(id) {
         .attr("src");
       console.log(result.id);
       result.id = "https://image.tmdb.org/t/p/original/" + result.id.replace("/t/p/w533_and_h300_bestv2/","")
-      return result;
+      return result.id;
     });
   })
   .catch(function (err) {
