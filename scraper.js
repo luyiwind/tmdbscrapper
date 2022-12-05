@@ -83,7 +83,7 @@ function searchMovies(searchTerm) {
   }
   //get options
   var options = {
-    uri: `https://www.themoviedb.org/search?query=${searchTerm}`,
+    uri: encodeURI(`https://www.themoviedb.org/search?query=${searchTerm}`),
     headers: {
       "accept-language":"zh-CN;q=0.8,zh;q=0.7"
     },
