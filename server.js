@@ -31,8 +31,8 @@ app.get("/movie/:id", (req, res) => {
   });
 });
 app.get("/drop/:id", (req, res) => {
-  getBackdrop(req.params.id).then((movie) => {
-    res.json(movie);
+  getBackdrop(req.params.id).then((result) => {
+    res.json(result);
   });
 });
 app.get("/collection/:id", (req, res) => {
