@@ -193,5 +193,6 @@ function getMovie(movie) {
 module.exports = {
   getAllMovies,
   searchMovies,
+  getTrends,
   getMovie,
 };
