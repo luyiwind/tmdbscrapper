@@ -128,7 +128,7 @@ function searchMovies(searchTerm) {
 function getBackdrop(id) {
   //get options
   var options = {
-    uri: `https://www.themoviedb.org${id}/remote/media_panel/backdrops?translate=false&item_count=1`,
+    uri: `https://www.themoviedb.org/tv/${id}/remote/media_panel/backdrops?translate=false&item_count=1`,
     transform: function (body) {
       return cheerio.load(body);
     },
