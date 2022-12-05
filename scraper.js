@@ -41,6 +41,41 @@ function getAllMovies() {
     });
 }
 
+function getTrends() {
+  //get options
+  var options = {
+    uri: "https://www.themoviedb.org",
+    headers: {
+      "accept-language":"zh-CN;q=0.8,zh;q=0.7"
+    },
+    transform: function (body) {
+      return cheerio.load(body);
+    },
+  };
+
+  return rp(options)
+    .then(function ($) {
+      const data = $("div.card.style_1");
+      let movies = [];
+      data.each((i, element) => {
+        let movie = {};
+        const $element = $(element);
+        movie.image = $element
+          .find("div.image div.wrapper a img")
+          .attr("data-src");
+        movie.title = $element.find("div.content h2").text();
+        movie.id = $element.find("div.image div.wrapper a").attr("href");
+        movie.release_date = $element.find("div.content p").text();
+        movies.push(movie);
+      });
+      const selectedMovies = movies.slice(0, -3);
+      return selectedMovies;
+    })
+    .catch(function (err) {
+      // Crawling failed or Cheerio choked...
+    });
+}
+
 //search-movies
 function searchMovies(searchTerm) {
   if (searchCache[searchTerm]) {
