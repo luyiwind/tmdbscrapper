@@ -44,7 +44,7 @@ function getAllMovies() {
 function getTrends() {
   //get options
   var options = {
-    uri: "https://www.themoviedb.org",
+    uri: "https://www.themoviedb.org/remote/panel?panel=trending_scroller&group=today",
     headers: {
       "accept-language":"zh-CN;q=0.8,zh;q=0.7"
     },
