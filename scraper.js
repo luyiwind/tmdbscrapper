@@ -117,7 +117,7 @@ function searchMovies(searchTerm) {
       });
       searchCache[searchTerm] = results;
       const selectedMovies = results.slice(0, 1);
-      return results;
+      return selectedMovies;
     })
     .catch(function (err) {
       // Crawling failed or Cheerio choked...
