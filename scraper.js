@@ -2,6 +2,7 @@ const cheerio = require("cheerio");
 const rp = require("request-promise");
 const movieCache = {};
 const searchCache = {};
+const picCache = {};
 
 //play-trailer
 
@@ -126,6 +127,8 @@ function searchMovies(searchTerm) {
 }
 
 function getBackdrop(id) {
+  if (picCache[id])
+  
   //get options
   var options = {
     uri: `https://www.themoviedb.org${id}/remote/media_panel/backdrops?translate=false&item_count=1`,
@@ -147,6 +150,7 @@ function getBackdrop(id) {
       //console.log(result.id);
       results.push(result);
     });
+    picCache[id] = results[0];
     return results[0];
   })
   .catch(function (err) {
