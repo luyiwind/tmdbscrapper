@@ -117,36 +117,40 @@ function searchMovies(searchTerm) {
       });
       //searchCache[searchTerm] = results;
       const first = results[0];
-      return first;
-      //get options
-      var options = {
-        uri: `https://www.themoviedb.org${first.id}/remote/media_panel/backdrops?translate=false&item_count=1`,
-        transform: function (body) {
-          return cheerio.load(body);
-        },
-      };
-      rp(options)
-      .then(function ($) {
-        const data = $("div.backdrop");
-        data.each((i, element) => {
-          let result = {};
-          const $element = $(element);
-          result.url = $element
-            .find("img")
-            .attr("src");
-          result.url = "https://image.tmdb.org/t/p/original/" + result.url.replace("/t/p/w533_and_h300_bestv2/","")
-          return result;
-        });
-      })
-      .catch(function (err) {
-        // Crawling failed or Cheerio choked...
-        console.log(err);
-      });
+      return getBackdrop(first.id);
     })
     .catch(function (err) {
       // Crawling failed or Cheerio choked...
       console.log(err);
     });
+}
+
+function getBackdrop(id) {
+  //get options
+  var options = {
+    uri: `https://www.themoviedb.org${id}/remote/media_panel/backdrops?translate=false&item_count=1`,
+    transform: function (body) {
+      return cheerio.load(body);
+    },
+  };
+  rp(options)
+  .then(function ($) {
+    const data = $("div.backdrop");
+    console.log(data);
+    data.each((i, element) => {
+      let result = {};
+      const $element = $(element);
+      result.url = $element
+        .find("img")
+        .attr("src");
+      result.url = "https://image.tmdb.org/t/p/original/" + result.url.replace("/t/p/w533_and_h300_bestv2/","")
+      return result;
+    });
+  })
+  .catch(function (err) {
+    // Crawling failed or Cheerio choked...
+    console.log(err);
+  });
 }
 
 //single movie
