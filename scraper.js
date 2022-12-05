@@ -95,7 +95,7 @@ function searchMovies(searchTerm) {
   return rp(options)
     .then(function ($) {
       const data = $("div.card.v4.tight");
-      print(data);
+      console.log(data);
       let results = [];
       data.each((i, element) => {
         let result = {};
