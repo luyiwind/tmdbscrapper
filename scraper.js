@@ -128,7 +128,7 @@ function searchMovies(searchTerm) {
 
 function getBackdrop(id) {
   if (picCache[id]) {
-    Promise.resolve(picCache[id]));
+    return Promise.resolve(picCache[id]);
   }
   
   //get options
