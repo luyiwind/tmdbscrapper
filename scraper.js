@@ -117,6 +117,7 @@ function searchMovies(searchTerm) {
       });
       //searchCache[searchTerm] = results;
       const first = results[0];
+      return first;
       //get options
       var options = {
         uri: `https://www.themoviedb.org${first.id}/remote/media_panel/backdrops?translate=false&item_count=1`,
