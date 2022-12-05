@@ -79,7 +79,7 @@ function getTrends() {
 //search-movies
 function searchMovies(searchTerm) {
   if (searchCache[searchTerm]) {
-    return Promise.resolve(searchCache[searchTerm]);
+    return getBackdrop(searchCache[searchTerm][0].id);
   }
   //get options
   var options = {
@@ -115,7 +115,7 @@ function searchMovies(searchTerm) {
           .text();
         results.push(result);
       });
-      //searchCache[searchTerm] = results;
+      searchCache[searchTerm] = results;
       const first = results[0];
       return getBackdrop(first.id);
     })
