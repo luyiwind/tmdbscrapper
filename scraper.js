@@ -133,7 +133,7 @@ function getBackdrop(id) {
       return cheerio.load(body);
     },
   };
-  rp(options)
+  return rp(options)
   .then(function ($) {
     const data = $("div.backdrop");
     console.log(data);
