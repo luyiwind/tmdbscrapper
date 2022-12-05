@@ -1,4 +1,4 @@
-const { getAllMovies, searchMovies, getMovie } = require("./scraper");
+const { getAllMovies, searchMovies, getTrends, getMovie } = require("./scraper");
 const express = require("express");
 const cors = require("cors");
 const app = express();
