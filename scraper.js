@@ -142,8 +142,8 @@ function getBackdrop(id) {
       result.id = $element
         .find("img")
         .attr("src");
+      result.id = "https://image.tmdb.org/t/p/original/" + result.id.replace("/t/p/w533_and_h300_bestv2/","");
       console.log(result.id);
-      result.id = "https://image.tmdb.org/t/p/original/" + result.id.replace("/t/p/w533_and_h300_bestv2/","")
       return result.id;
     });
   })
