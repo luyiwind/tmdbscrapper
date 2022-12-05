@@ -143,6 +143,7 @@ function getBackdrop(id) {
       result.id = $element
         .find("img")
         .attr("src");
+      console.log(result.id);
       result.id = "https://image.tmdb.org/t/p/original/" + result.url.replace("/t/p/w533_and_h300_bestv2/","")
       return result;
     });
