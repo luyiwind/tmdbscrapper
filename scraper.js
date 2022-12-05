@@ -117,7 +117,7 @@ function searchMovies(searchTerm) {
       });
       //searchCache[searchTerm] = results;
       const first = results[0];
-      return getBackdrop(first.id);
+      return first;
     })
     .catch(function (err) {
       // Crawling failed or Cheerio choked...
@@ -224,5 +224,6 @@ module.exports = {
   getAllMovies,
   searchMovies,
   getTrends,
+  getBackdrop,
   getMovie,
 };
