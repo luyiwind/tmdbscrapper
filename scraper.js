@@ -27,7 +27,7 @@ function getAllMovies() {
         const $element = $(element);
         movie.image = $element
           .find("div.image div.wrapper a img")
-          .attr("data-src");
+          .attr("src");
         movie.title = $element.find("div.content h2").text();
         movie.id = $element.find("div.image div.wrapper a").attr("href");
         movie.release_date = $element.find("div.content p").text();
@@ -62,7 +62,7 @@ function getTrends() {
         const $element = $(element);
         movie.image = $element
           .find("div.image div.wrapper a img")
-          .attr("data-src");
+          .attr("src");
         movie.title = $element.find("div.content h2").text();
         movie.id = $element.find("div.image div.wrapper a").attr("href");
         movie.release_date = $element.find("div.content p").text();
