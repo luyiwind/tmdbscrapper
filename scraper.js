@@ -136,6 +136,7 @@ function getBackdrop(id) {
   return rp(options)
   .then(function ($) {
     const data = $("div.backdrop");
+    let results = [];
     data.each((i, element) => {
       let result = {};
       const $element = $(element);
@@ -144,8 +145,9 @@ function getBackdrop(id) {
         .attr("src");
       result.id = "https://image.tmdb.org/t/p/original/" + result.id.replace("/t/p/w533_and_h300_bestv2/","");
       console.log(result.id);
-      return result.id;
+      results.push(result);
     });
+    return results;
   })
   .catch(function (err) {
     // Crawling failed or Cheerio choked...
